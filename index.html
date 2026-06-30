@@ -15,12 +15,229 @@
 
 		<!-- Theme used for syntax highlighted code -->
 		<link rel="stylesheet" href="dist/plugin/highlight/monokai.css" />
+
+    <style>
+      p {
+        text-align: left;
+      }
+      p img {
+        height: 1em;
+        vertical-align: text-bottom;
+      }
+    </style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+        <section>
+          <h2>Wireless Communication<h3>
+          <h3>Lance Hartung</h3>
+        </section>
+
+				<section>
+          <h2>Radio</h2>
+          <p>Radio waves are all around us and very useful.</p>
+          <ul>
+            <li class="fragment">Phones and tablets</li>
+            <li class="fragment">Microwave ovens</li>
+            <li class="fragment">Weather radars, satellites, and more...</li>
+          </ul>
+          <p class="fragment">They are invisible, so how do we study them?</p>
+        </section>
+
+				<section>
+          <h2>Waves</h2>
+          <p>Radio appears to behave like a wave.</p>
+          <p class="fragment">Imagine throwing a rock into a lake...</p>
+          <div class="fragment">
+            <video data-autoplay src="./videos/Splash.mp4" />
+          </div>
+        </section>
+
+				<section>
+          <h2>Properties of Waves</h2>
+          <p>Waves have two important properties.</p>
+          <ol>
+            <li class="fragment">
+              <p>Length / Frequency</p>
+              <img src="./images/wave_a.png" style="height: 2em" />
+              <img src="./images/wave_b.png" style="height: 2em" />
+            </li>
+            <li class="fragment">
+              <p>Amplitude</p>
+              <img src="./images/wave_a.png" style="height: 2em" />
+              <img src="./images/wave_c.png" style="height: 2em" />
+            </li>
+          </ol>
+          <p class="fragment">Varying these creates endless possibilities!</p>
+        </section>
+
+        <section>
+          <h2>Sound Analogy</h2>
+          <p>How do we transmit information?</p>
+          <aside class="notes">
+            Ask if anyone plays a musical instrument.
+          </aside>
+          <p class="fragment">We can think of radio waves like sound.</p>
+          <ol>
+            <li class="fragment">
+              <p>Changing notes (frequencies)</p>
+            </li>
+            <li class="fragment">
+              <p>Changing volume (amplitude)</p>
+            </li>
+            <li class="fragment">
+              <p>Together, creates music</p>
+            </li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>Antennas</h2>
+          <p>How do we transmit information?</p>
+          <p class="fragment">For sound, we use speakers and microphones.</p>
+          <p class="fragment">For radio, we use antennas.</p>
+          <div class="fragment">
+            <p>There are many kinds of antennas.</p>
+            <img src="./images/antenna_1.jpg" style="height: 2em" />
+            <img src="./images/antenna_2.jpg" style="height: 2em" />
+            <img src="./images/antenna_4.jpg" style="height: 2em" />
+            <img src="./images/antenna_3.jpg" style="height: 2em" />
+          </div>
+          <p class="fragment">Key: antenna size is related to wave length / frequency.</p>
+        </section>
+
+        <section>
+          <h2>Transmission</h2>
+          <p>How do antennas work?</p>
+
+        </section>
+
+        <section>
+          <h2>Interference</h2>
+          <p>Radio uses a shared medium.</p>
+          <p class="fragment">What happens if everyone in the classroom is talking?</p>
+          <p class="fragment">Solutions to prevent interference in wireless:</p>
+          <ol>
+            <li class="fragment">
+              <p>Taking turns (raising your hand)</p>
+            </li>
+            <li class="fragment">
+              <p>Adjust power (whispering)</p>
+            </li>
+            <li class="fragment">
+              <p>Difference frequencies</p>
+            </li>
+          </ol>
+        </section>
+
+        <section>
+          <section>
+            <h2>Activity 1 - Waterfall</h2>
+
+            <aside class="notes">
+              Ask if everyone has used Scratch before.
+            </aside>
+          </section>
+
+          <section>
+            <h2>Pipelines</h2>
+            <p>something about pipelines processing data step by step</p>
+          </section>
+
+          <section>
+            <h2>Data Source</h2>
+            <p>Add a source block from the <img src="./images/radio-menu.png" />menu.</p>
+            <img src="./images/waterfall-step-1.png" class="r-stretch" />
+            <div class="fragment">
+              <p>Special block that begins a radio pipeline.</p>
+              <p>The &#x2556 symbol means it passes data to the next block.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2>Calculation Step</h2>
+            <p>Add a calculation block - calculate power density.</p>
+            <img src="./images/waterfall-step-2.png" class="r-stretch" />
+            <div class="fragment">
+              <p>The &#x256A symbol means it does some kind of decoding.</p>
+              <p>You can only have one &#x256A block in each pipeline.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2>Output Step</h2>
+            <p>Add an output block - output waterfall.</p>
+            <img src="./images/waterfall-step-3.png" class="r-stretch" />
+            <div class="fragment">
+              <p>The &#x2514 symbols means it produces output.</p>
+              <p>You can only have one &#x2514 block in each pipeline.</p>
+              <p>You can try different color schemes from the dropdown menu.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2>Controlling the Radio</h2>
+            <p>Add an event block - when <img src="./images/green-flag.png" /> clicked from the <img src="./images/events-menu.png" /> menu.</p>
+            <img src="./images/waterfall-step-4.png" class="r-stretch" />
+            <div class="fragment">
+              <p>Code blocks placed here will run after you click <img src="./images/green-flag.png" />.
+              <p>We will add blocks here to control the radio.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2>Starting the Radio</h2>
+            <p>Add an start radio block.</p>
+            <img src="./images/waterfall-step-5.png" class="r-stretch" />
+            <div class="fragment">
+              <p>Check your handout for the correct radio name and password.</p>
+            </div>
+          </section>
+
+          <section>
+            <h2>Tuning the Radio</h2>
+            <p>Add a tuning block.</p>
+            <img src="./images/waterfall-step-6.png" class="r-stretch" />
+            <div class="fragment">
+              <p>This block tunes the radio to a particular frequency.</p>
+              <ul>
+                <li>104.1 MHz - FM radio</li>
+                <li>855 MHz - Cellular LTE</li>
+                <li>917 MHz - LoRa chirps</li>
+              </ul>
+            </div>
+          </section>
+
+          <section>
+            <h2>Check Your Code</h2>
+            <p>Your code should look similar to this.</p>
+            <img src="./images/waterfall-step-7.png" class="r-stretch" />
+          </section>
+
+          <section>
+            <h2>Running Your Code</h2>
+            <p>Click <img src="./images/green-flag.png" /> to run your code.</p>
+            <p>If everything works, you should see an image appear behind Scratch.</p>
+            <p>Try some other frequencies - what do you notice?</p>
+            <p>Try adding "set gain" block with different values - what happens?</p>
+            <p>Note: it is best to click <img src="./images/stop-sign.png" /> before changing your code.</p>
+          </section>
+
+          <section>
+            <h2>Advanced Code</h2>
+            <p>Try doing some interesting things with your code.</p>
+            <img src="./images/waterfall-step-8.png" class="r-stretch" />
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Activity 2 - Audio</h2>
+
+          </section>
+        </section>
+
 			</div>
 		</div>
 
@@ -34,6 +251,8 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
+
+        pdfSeparateFragments: false,
 
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [RevealMarkdown, RevealHighlight, RevealNotes],

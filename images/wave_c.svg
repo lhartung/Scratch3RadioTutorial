@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="101.6mm"
+   height="76.199997mm"
+   viewBox="0 0 101.6 76.199997"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="wave_c.svg"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   inkscape:export-filename="wave_c.png"
+   inkscape:export-xdpi="300.014"
+   inkscape:export-ydpi="300.014"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.71535494"
+     inkscape:cx="368.34861"
+     inkscape:cy="320.81976"
+     inkscape:window-width="1853"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <clipPath
+       id="clipPath7328">
+      <rect
+         style="fill:#ffffff;stroke:#1a1a1a;stroke-width:1;stroke-linecap:round"
+         width="32.583992"
+         height="20.138012"
+         x="34.914608"
+         y="82.578926"
+         ry="0.12673487"
+         id="rect2" />
+    </clipPath>
+    <clipPath
+       id="clipPath2544">
+      <rect
+         style="fill:#ffffff;stroke:#1a1a1a;stroke-width:1;stroke-linecap:round"
+         width="32.583992"
+         height="20.138012"
+         x="34.914608"
+         y="82.578926"
+         ry="0.12673487"
+         id="rect3" />
+    </clipPath>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-24.058437,-20.311794)">
+    <path
+       style="fill:none;stroke:#00ffff;stroke-width:1;stroke-linecap:round"
+       d="M 24.5584 58.4118 C 29.3489 48.8308 34.1394 39.353 38.9299 33.376 C 43.7203 27.399 48.5108 25.0649 53.3013 27.1927 C 58.0918 29.3204 62.8822 35.8877 67.6727 44.518 C 72.4632 53.1483 77.2537 63.6716 82.0442 72.3056 C 86.8346 80.9396 91.6251 87.4948 96.4156 89.6309 C 101.206 91.7671 105.997 89.4178 110.787 83.4476 C 115.577 77.4773 120.368 67.9927 125.158 58.4118"
+       title="2*sin(x)"
+       id="path3" />
+  </g>
+</svg>
