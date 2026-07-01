@@ -134,6 +134,7 @@
         <section>
           <section>
             <h2>Activity 1 - Waterfall</h2>
+            <img src="./images/waterfall-step-0.png" class="r-stretch" />
 
             <aside class="notes">
               Ask if everyone has used Scratch before.
@@ -142,7 +143,11 @@
 
           <section>
             <h2>Pipelines</h2>
-            <p>something about pipelines processing data step by step</p>
+            <p>We will use some special blocks in Scratch to create data pipelines.</p>
+            <img src="./images/pipeline.png" class="r-stretch" />
+            <div class="fragment">
+              <p>Series of processing steps that change data and pass it to the next step.</p>
+            </div>
           </section>
 
           <section>
@@ -228,13 +233,151 @@
             <h2>Advanced Code</h2>
             <p>Try doing some interesting things with your code.</p>
             <img src="./images/waterfall-step-8.png" class="r-stretch" />
+            <p>You could randomly change the gain and see what happens.</p>
           </section>
         </section>
 
         <section>
           <section>
-            <h2>Activity 2 - Audio</h2>
+            <h2>Activity 2 - LoRa</h2>
+            <img src="./images/lora.png" class="r-stretch" />
+            <p>LoRa is a Long Range radio technology</p>
+            <p>Used for sensors, factory automation, scientific measurements</p>
+          </section>
 
+          <section>
+            <h2>Data Source</h2>
+            <p>Add a new source block from the <img src="./images/radio-menu.png" />menu.</p>
+            <img src="./images/lora-step-1.png" class="r-stretch" />
+            <p>You can leave your existing waterfall pipeline in place.</p>
+          </section>
+
+          <section>
+            <h2>Calculation Step</h2>
+            <p>Add a LoRa demodulation block from the <img src="./images/radio-menu.png" />menu.</p>
+            <img src="./images/lora-step-2.png" class="r-stretch" />
+            <p>This block decodes LoRa chirps into text.</p>
+          </section>
+
+          <section>
+            <h2>Output Step</h2>
+            <p>Add an output block - output text.</p>
+            <img src="./images/lora-step-3.png" class="r-stretch" />
+            <p>This block causes Scratch to say the decoded messages.</p>
+          </section>
+
+          <section>
+            <h2>Tuning the Radio</h2>
+            <p>Add a tuning block.</p>
+            <img src="./images/lora-step-4.png" class="r-stretch" />
+            <p>Set the tuner to 917 MHz.</p>
+          </section>
+
+          <section>
+            <h2>Check Your Code</h2>
+            <p>Your code should look similar to this.</p>
+            <img src="./images/lora-step-5.png" class="r-stretch" />
+          </section>
+
+          <section>
+            <h2>Running Your Code</h2>
+            <p>Click <img src="./images/green-flag.png" /> to run your code.</p>
+            <p>If everything works, you should see chirps (diagonal lines) in the waterfall.</p>
+            <p>Scratch should have a message for you? What does he say?</p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Activity 3 - Audio</h2>
+            <img src="./images/audio.png" class="r-stretch" />
+          </section>
+
+          <section>
+            <h2>Data Source</h2>
+            <p>Add a new source block from the <img src="./images/radio-menu.png" />menu.</p>
+            <img src="./images/audio-step-1.png" class="r-stretch" />
+            <p>You can leave your existing waterfall pipeline in place.</p>
+            <p>You can delete your LoRa pipeline.</p>
+          </section>
+
+          <section>
+            <h2>Filter Step</h2>
+            <p>Add a noise filter block.</p>
+            <img src="./images/audio-step-2.png" class="r-stretch" />
+            <p>Filtering is important for good sound quality.</p>
+          </section>
+
+          <section>
+            <h2>Demodulation Step</h2>
+            <p>Add a demodulation block - FM to audio</p>
+            <img src="./images/audio-step-3.png" class="r-stretch" />
+            <p>This converts the radio signal to an audio signal.</p>
+          </section>
+
+          <section>
+            <h2>Multiply Step</h2>
+            <p>Add a multiply block</p>
+            <img src="./images/audio-step-4.png" class="r-stretch" />
+            <p>Multiplication on the audio signal adjusts the volume.</p>
+          </section>
+
+          <section>
+            <h2>Output Step</h2>
+            <p>Add an output block - output audio.</p>
+            <img src="./images/audio-step-5.png" class="r-stretch" />
+            <p>This will play the decoded audio on your laptop speaker.</p>
+          </section>
+
+          <section>
+            <h2>Tuning the Radio</h2>
+            <p>Add a tuning block to your code.</p>
+            <img src="./images/audio-step-6.png" class="r-stretch" />
+            <p>There is a tuning block with preset radio stations.</p>
+            <p>You can also enter frequencies in the numeric tuner.</p>
+            <ul>
+              <li>88.7 MHz - Public radio</li>
+              <li>104.1 MHz - Top 40 radio</li>
+              <li>162.55 MHz - Weather broadcast</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Setting the Gain</h2>
+            <p>Add a set gain block.</p>
+            <img src="./images/audio-step-7.png" class="r-stretch" />
+            <p>The gain amplifies the received signal (and noise).</p>
+            <p>Some FM stations are strong - no gain needed.</p>
+            <p>Some are far away or weak - more gain needed.</p>
+          </section>
+
+          <section>
+            <h2>Check Your Code</h2>
+            <p>Your code should look similar to this.</p>
+            <img src="./images/audio-step-8.png" class="r-stretch" />
+          </section>
+
+          <section>
+            <h2>Running Your Code</h2>
+            <p>Click <img src="./images/green-flag.png" /> to run your code.</p>
+            <p>If everything works, you should hear something from the speakers.</p>
+            <p>Try different frequencies using the tuner.</p>
+            <p>Try changing the filter size or the multiplier value. What happens?</p>
+            <p>Try adding a filter to your waterfall pipeline to see what it does.</p>
+          </section>
+
+          <section>
+            <h2>Learning about Filters</h2>
+            <p>Try adding a filter block to your existing waterfall pipeline.</p>
+            <img src="./images/audio-step-9.png" class="r-stretch" />
+            <p>You can see what the filter does to the radio signal.</p>
+          </section>
+
+          <section>
+            <h2>Advanced Code</h2>
+            <p>Try doing some interesting things with your code.</p>
+            <img src="./images/audio-step-10.png" class="r-stretch" />
+            <p>You could use the position of Scratch to set the frequency and gain.</p>
           </section>
         </section>
 
