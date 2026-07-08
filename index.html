@@ -7,34 +7,57 @@
 			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
 		/>
 
-		<title>reveal.js</title>
+		<title>Wireless Communication with Scratch</title>
 
-		<link rel="stylesheet" href="dist/reset.css" />
-		<link rel="stylesheet" href="dist/reveal.css" />
-		<link rel="stylesheet" href="dist/theme/black.css" />
+		<link rel="stylesheet" href="dist/reset.css" media="screen" />
+		<link rel="stylesheet" href="dist/reveal.css" media="screen" />
+		<link rel="stylesheet" href="dist/theme/black.css" media="screen" />
 
 		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="dist/plugin/highlight/monokai.css" />
+		<link rel="stylesheet" href="dist/plugin/highlight/monokai.css" media="screen" />
 
     <style>
       p {
         text-align: left;
       }
+
       p img {
         height: 1em;
         vertical-align: text-bottom;
+      }
+
+      @media print {
+        div.slides {
+          counter-set: heading 0;
+          counter-set: subheading 0;
+        }
+
+        section.activity {
+          counter-increment: heading;
+          counter-reset: subheading;
+          break-after: page;
+        }
+
+        h2:not(.activity)::before {
+          content: "\2726  " counter(heading)"." counter(subheading)" ";
+          counter-increment: subheading;
+        }
+
+        .no-print {
+          display: none !important;
+        }
       }
     </style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-        <section>
-          <h2>Wireless Communication<h3>
+        <section class="no-print">
+          <h2>Wireless Communication</h2>
           <h3>Lance Hartung</h3>
         </section>
 
-				<section>
+				<section class="no-print">
           <h2>Radio</h2>
           <p>Radio waves are all around us and very useful.</p>
           <ul>
@@ -46,7 +69,7 @@
           <p class="fragment">They are invisible, so how do we study them?</p>
         </section>
 
-        <section>
+        <section class="no-print">
           <h2>Sound Analogy</h2>
           <p>How do we send information using radio?</p>
           <aside class="notes">
@@ -69,7 +92,7 @@
           </ol>
         </section>
 
-				<section>
+				<section class="no-print">
           <h2>Waves</h2>
           <p>Sound and radio both behave like waves.</p>
           <p class="fragment">Imagine throwing a rock into a lake...</p>
@@ -78,7 +101,7 @@
           </div>
         </section>
 
-				<section>
+				<section class="no-print">
           <h2>Properties of Waves</h2>
           <p>Waves have two important properties.</p>
           <ol>
@@ -96,7 +119,7 @@
           <p class="fragment">As with music, we can use these to send information!</p>
         </section>
 
-        <section>
+        <section class="no-print">
           <h2>Antennas</h2>
           <p>How do we transmit information?</p>
           <p class="fragment">For sound, we use speakers and microphones.</p>
@@ -112,7 +135,7 @@
           <p class="fragment">WiFi uses a wavelength ~5-12cm, FM Radio is ~3m.</p>
         </section>
 
-        <section>
+        <section class="no-print">
           <h2>Transmission</h2>
           <p>How do antennas work?</p>
           <img src="./images/dipole_animation.gif" class="r-stretch" />
@@ -121,7 +144,7 @@
           <p class="fragment">Learn more: circuits and electrical engineering.</p>
         </section>
 
-        <section>
+        <section class="no-print">
           <h2>Interference</h2>
           <p>Radio can interfere with each other.</p>
           <p class="fragment">What happens if everyone in the classroom is talking?</p>
@@ -140,7 +163,7 @@
           <p class="fragment">The FCC makes rules to keep radio orderly and fair.</p>
         </section>
 
-        <section>
+        <section class="no-print">
           <h1>Tutorials</h1>
 
           <aside class="notes">
@@ -148,7 +171,7 @@
           </aside>
         </section>
 
-        <section>
+        <section class="no-print">
           <h2>Pipelines</h2>
           <p>We will use some special blocks in Scratch to create data pipelines.</p>
           <img src="./images/pipeline.png" class="r-stretch" />
@@ -157,9 +180,9 @@
           </div>
         </section>
 
-        <section>
+        <section class="activity">
           <section>
-            <h2>Activity 1 - Waterfall</h2>
+            <h2 class="activity">Activity 1 - Waterfall</h2>
             <img src="./images/waterfall-step-0.png" class="r-stretch" />
             <p>Look at radio data using a waterfall graph!</p>
           </section>
@@ -251,9 +274,9 @@
           </section>
         </section>
 
-        <section>
+        <section class="activity">
           <section>
-            <h2>Activity 2 - LoRa</h2>
+            <h2 class="activity">Activity 2 - LoRa</h2>
             <img src="./images/lora.png" class="r-stretch" />
             <p>LoRa is a Long Range radio communication technology</p>
             <p>Used for sensors, factory automation, scientific measurements</p>
@@ -303,9 +326,9 @@
           </section>
         </section>
 
-        <section>
+        <section class="activity">
           <section>
-            <h2>Activity 3 - Audio</h2>
+            <h2 class="activity">Activity 3 - Audio</h2>
             <img src="./images/audio.png" class="r-stretch" />
             <p>Use radio to listen to music!</p>
           </section>
@@ -398,11 +421,11 @@
           </section>
         </section>
 
-        <section>
+        <section class="no-print">
           <h1>Wrap-Up</h1>
         </section>
 
-				<section>
+				<section class="no-print">
           <h2>Our Sensors</h2>
           <p>These are the sensors you used for the activity.</p>
           <aside class="notes">
@@ -418,7 +441,7 @@
           </div>
         </section>
 
-				<section>
+				<section class="no-print">
           <h2>Going Beyond Scratch</h2>
           <p>Wireless researchers use a tool called gnuradio.</p>
           <img src="./images/gnuradio.png" class="r-stretch" />
@@ -428,14 +451,14 @@
           </div>
         </section>
 
-        <section>
+        <section class="no-print">
           <h2>Research - Health</h2>
           <img src="./images/research-medusa.png" class="r-stretch" />
           <p class="fragment">Radar - radio detection and ranging.</p>
           <p class="fragment">Can be used to detect vital signs (breathing &amp; heart)</p>
         </section>
 
-        <section>
+        <section class="no-print">
           <h2>Research - SpecScape</h2>
           <img src="./images/research-specscape.png" class="r-stretch" />
           <p class="fragment">Radio spectrum is a valuable resource.</p>
@@ -453,14 +476,22 @@
 			// More info about initialization & config:
 			// - https://revealjs.com/initialization/
 			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
 
-        pdfSeparateFragments: false,
+      const urlParams = new URLSearchParams(window.location.search);
+      const print = urlParams.get('print-pdf');
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
-			});
+      console.log(`print-pdf: ${print}`);
+
+      if (!print) {
+        Reveal.initialize({
+          hash: true,
+
+          pdfSeparateFragments: false,
+
+          // Learn about plugins: https://revealjs.com/plugins/
+          plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+        });
+      }
 		</script>
 	</body>
 </html>
