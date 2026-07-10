@@ -465,6 +465,73 @@
           <p class="fragment">Deploy sensors around the country to understand how it is being used.</p>
         </section>
 
+        <section class="activity" data-visibility="hidden">
+          <section>
+            <h2 class="activity">Block Library</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Block</th>
+                  <th scope="col">Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><img src="./images/library-start.png" /></td>
+                  <td>Use this to connect to the radio on your handout. You should have one of these in your program.</td>
+                </tr>
+                <tr>
+                  <td><img src="./images/library-tune.png" /></td>
+                  <td>Use this to tune the radio to a channel by name.</td>
+                </tr>
+                <tr>
+                  <td><img src="./images/library-tune-frequency.png" /></td>
+                  <td>Use this to tune the radio to a given frequency.</td>
+                </tr>
+                <tr>
+                  <td><img src="./images/library-gain.png" /></td>
+                  <td>Use this to set the radio gain. Use higher gains (30-40) to amplify weak signals.</td>
+                </tr>
+                <tr>
+                  <td><img src="./images/library-source.png" /></td>
+                  <td>Use this block to start a new data pipeline. You can have more than one of these in your program.</td>
+                </tr>
+                <tr>
+                  <td><img src="./images/library-filter.png" /></td>
+                  <td>Use this to reduce noise in your signal, especially for audio decoding. Try values between 1 and 150 and see how it affects your signal.</td>
+                </tr>
+                <tr>
+                  <td><img src="./images/library-fm.png" /></td>
+                  <td>Use this to convert your radio signal to audio. You should only have one &#x256A block in each pipeline.</td>
+                </tr>
+                <tr>
+                  <td><img src="./images/library-psd.png" /></td>
+                  <td>Use this to calculate power levels, which you can then view as a waterfall. You should only have one &#x256A block in each pipeline.</td>
+                </tr>
+                <tr>
+                  <td><img src="./images/library-lora.png" /></td>
+                  <td>Use this to convert a LoRa signal into text messages. You should only have one &#x256A block in each pipeline.</td>
+                </tr>
+                <tr>
+                  <td><img src="./images/library-multiply.png" /></td>
+                  <td>Use this to multiply a signal by some amount. You can use this to adjust the volume of an audio signal.</td>
+                </tr>
+                <tr>
+                  <td><img src="./images/library-audio.png" /></td>
+                  <td>Use this to output an audio signal to your laptop speakers. You can only have one output block in each pipeline.</td>
+                </tr>
+                <tr>
+                  <td><img src="./images/library-waterfall.png" /></td>
+                  <td>Use this to display the waterfall from a power density calculation. You can only have one output block in each pipeline.</td>
+                </tr>
+                <tr>
+                  <td><img src="./images/library-text.png" /></td>
+                  <td>Use this to output text - Scratch will say the message. You can only have one output block in each pipeline.</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </section>
 			</div>
 		</div>
 
@@ -480,9 +547,7 @@
       const urlParams = new URLSearchParams(window.location.search);
       const print = urlParams.get('print-pdf');
 
-      console.log(`print-pdf: ${print}`);
-
-      if (!print) {
+      if (print === null) {
         Reveal.initialize({
           hash: true,
 
