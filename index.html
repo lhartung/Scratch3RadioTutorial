@@ -21,12 +21,19 @@
         text-align: left;
       }
 
-      p img {
+      img.inline {
         height: 1em;
-        vertical-align: text-bottom;
+        margin: 0 0.2em;
+        vertical-align: center;
       }
 
       @media print {
+        @page {
+          @bottom-right {
+            content: "Page " counter(page);
+          }
+        }
+
         div.slides {
           counter-set: heading 0;
           counter-set: subheading 0;
@@ -184,15 +191,15 @@
           <section>
             <h2 class="activity">Activity 1 - Waterfall</h2>
             <img src="./images/waterfall-step-0.png" class="r-stretch" />
-            <p>Look at radio data using a waterfall graph!</p>
+            <p>In this activity, you will look at radio data using a waterfall graph!</p>
           </section>
 
           <section>
             <h2>Data Source</h2>
-            <p>Add a source block from the <img src="./images/radio-menu.png" />menu.</p>
+            <p>Add a source block from the <img class="inline" src="./images/radio-menu.png" />menu.</p>
             <img src="./images/waterfall-step-1.png" class="r-stretch" />
             <div class="fragment">
-              <p>Special block that begins a radio pipeline.</p>
+              <p>This is a special block that begins a radio pipeline.</p>
               <p>The &#x2556 symbol means it passes data to the next block.</p>
             </div>
           </section>
@@ -202,7 +209,7 @@
             <p>Add a calculation block - calculate power density.</p>
             <img src="./images/waterfall-step-2.png" class="r-stretch" />
             <div class="fragment">
-              <p>The &#x256A symbol means it does some kind of decoding.</p>
+              <p>The &#x256A symbol means it converts radio data into another form.</p>
               <p>You can only have one &#x256A block in each pipeline.</p>
             </div>
           </section>
@@ -212,7 +219,7 @@
             <p>Add an output block - output waterfall.</p>
             <img src="./images/waterfall-step-3.png" class="r-stretch" />
             <div class="fragment">
-              <p>The &#x2514 symbols means it produces output.</p>
+              <p>The &#x2514 symbol means it produces output.</p>
               <p>You can only have one &#x2514 block in each pipeline.</p>
               <p>You can try different color schemes from the dropdown menu.</p>
             </div>
@@ -220,10 +227,10 @@
 
           <section>
             <h2>Controlling the Radio</h2>
-            <p>Add an event block - when <img src="./images/green-flag.png" /> clicked from the <img src="./images/events-menu.png" /> menu.</p>
+            <p>Add an event block - when <img class="inline" src="./images/green-flag.png" /> clicked from the <img class="inline" src="./images/events-menu.png" /> menu.</p>
             <img src="./images/waterfall-step-4.png" class="r-stretch" />
             <div class="fragment">
-              <p>Code blocks placed here will run after you click <img src="./images/green-flag.png" />.
+              <p>Code blocks placed here will run after you click <img class="inline" src="./images/green-flag.png" />.
               <p>We will add blocks here to control the radio.</p>
             </div>
           </section>
@@ -244,7 +251,7 @@
             <div class="fragment">
               <p>This block tunes the radio to a particular frequency.</p>
               <ul>
-                <li>104.1 MHz - FM radio station</li>
+                <li>98.1 MHz - FM radio station</li>
                 <li>855 MHz - Cellular LTE</li>
                 <li>917 MHz - LoRa chirps</li>
               </ul>
@@ -255,20 +262,21 @@
             <h2>Check Your Code</h2>
             <p>Your code should look similar to this.</p>
             <img src="./images/waterfall-step-7.png" class="r-stretch" />
+            <p>Maybe you chose a different frequency or color scheme.</p>
           </section>
 
           <section>
             <h2>Running Your Code</h2>
-            <p>Click <img src="./images/green-flag.png" /> to run your code.</p>
+            <p>Click <img class="inline" src="./images/green-flag.png" /> to run your code.</p>
             <p>If everything works, you should see an image appear behind Scratch.</p>
             <p>Try some other frequencies - what do you notice?</p>
             <p>Try adding "set gain" block with different values - what happens to the image?</p>
-            <p>Note: it is best to click <img src="./images/stop-sign.png" /> before changing your code.</p>
+            <p>Note: it is best to click <img class="inline" src="./images/stop-sign.png" /> before changing your code.</p>
           </section>
 
           <section>
             <h2>Advanced Code</h2>
-            <p>Try something using other Scratch blocks.</p>
+            <p>Try using other Scratch blocks such as the "pick random" block."</p>
             <img src="./images/waterfall-step-8.png" class="r-stretch" />
             <p>Example: you could randomly change the gain and see what happens.</p>
           </section>
@@ -279,20 +287,20 @@
             <h2 class="activity">Activity 2 - LoRa</h2>
             <img src="./images/lora.png" class="r-stretch" />
             <p>LoRa is a Long Range radio communication technology</p>
-            <p>Used for sensors, factory automation, scientific measurements</p>
-            <p>Decode a secret message!</p>
+            <p>It is used for sensors, factory automation, and scientific measurements.</p>
+            <p>In this activity, you will decode a secret message!</p>
           </section>
 
           <section>
             <h2>Data Source</h2>
-            <p>Add a new source block from the <img src="./images/radio-menu.png" />menu.</p>
+            <p>Add a new source block from the <img class="inline" src="./images/radio-menu.png" />menu.</p>
             <img src="./images/lora-step-1.png" class="r-stretch" />
-            <p>You can leave your existing waterfall pipeline in place.</p>
+            <p>You can leave your existing waterfall pipeline and start a new pipeline.</p>
           </section>
 
           <section>
             <h2>Calculation Step</h2>
-            <p>Add a LoRa demodulation block from the <img src="./images/radio-menu.png" />menu.</p>
+            <p>Add a LoRa demodulation block from the <img class="inline" src="./images/radio-menu.png" />menu.</p>
             <img src="./images/lora-step-2.png" class="r-stretch" />
             <p>This block decodes LoRa chirps into text.</p>
           </section>
@@ -306,9 +314,9 @@
 
           <section>
             <h2>Tuning the Radio</h2>
-            <p>Add a tuning block.</p>
+            <p>Change or replace your existing tuning block.</p>
             <img src="./images/lora-step-4.png" class="r-stretch" />
-            <p>Set the tuner to 917 MHz.</p>
+            <p>Make sure it is set to 917 MHz.</p>
           </section>
 
           <section>
@@ -319,7 +327,7 @@
 
           <section>
             <h2>Running Your Code</h2>
-            <p>Click <img src="./images/green-flag.png" /> to run your code.</p>
+            <p>Click <img class="inline" src="./images/green-flag.png" /> to run your code.</p>
             <p>If everything works, you should see chirps (diagonal lines) in the waterfall.</p>
             <p>Scratch should have a message for you? What does he say?</p>
             <p>Write the secret code on your handout.</p>
@@ -330,15 +338,15 @@
           <section>
             <h2 class="activity">Activity 3 - Audio</h2>
             <img src="./images/audio.png" class="r-stretch" />
-            <p>Use radio to listen to music!</p>
+            <p>In this activity, you will use radio to listen to music!</p>
           </section>
 
           <section>
             <h2>Data Source</h2>
-            <p>Add a new source block from the <img src="./images/radio-menu.png" />menu.</p>
+            <p>Add a new source block from the <img class="inline" src="./images/radio-menu.png" />menu.</p>
             <img src="./images/audio-step-1.png" class="r-stretch" />
             <p>You can leave your existing waterfall pipeline in place.</p>
-            <p>You can delete your LoRa pipeline.</p>
+            <p>You can delete your LoRa decoding pipeline.</p>
           </section>
 
           <section>
@@ -346,6 +354,7 @@
             <p>Add a noise filter block.</p>
             <img src="./images/audio-step-2.png" class="r-stretch" />
             <p>Filtering is important for good sound quality.</p>
+            <p>You can experiment with different values between 1 and 150.</p>
           </section>
 
           <section>
@@ -360,6 +369,7 @@
             <p>Add a multiply block</p>
             <img src="./images/audio-step-4.png" class="r-stretch" />
             <p>Multiplication on the audio signal adjusts the volume.</p>
+            <p>You can experiment with different values such as 0.1 and 0.5.</p>
           </section>
 
           <section>
@@ -371,13 +381,13 @@
 
           <section>
             <h2>Tuning the Radio</h2>
-            <p>Add a tuning block to your code.</p>
+            <p>Change or replace your tuning block.</p>
             <img src="./images/audio-step-6.png" class="r-stretch" />
-            <p>There is a tuning block with preset radio stations.</p>
+            <p>There is a tuning block with known radio stations.</p>
             <p>You can also enter frequencies in the numeric tuner.</p>
             <ul>
               <li>89.9 MHz - Public radio</li>
-              <li>104.1 MHz - Top 40 radio</li>
+              <li>98.1 MHz - Variety music</li>
               <li>162.55 MHz - Weather broadcast</li>
             </ul>
           </section>
@@ -399,7 +409,7 @@
 
           <section>
             <h2>Running Your Code</h2>
-            <p>Click <img src="./images/green-flag.png" /> to run your code.</p>
+            <p>Click <img class="inline" src="./images/green-flag.png" /> to run your code.</p>
             <p>If everything works, you should hear something from the speakers.</p>
             <p>Try different frequencies using the tuner.</p>
             <p>Try changing the filter size or the multiplier value. What happens?</p>
@@ -415,7 +425,7 @@
 
           <section>
             <h2>Advanced Code</h2>
-            <p>Try doing some interesting things with your code.</p>
+            <p>Try using some other blocks such as reading position of Scratch.</p>
             <img src="./images/audio-step-10.png" class="r-stretch" />
             <p>You could use the position of Scratch to set the frequency and gain.</p>
           </section>
